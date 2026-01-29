@@ -343,3 +343,6 @@
 2026-01-29 07:40:10,186 - db_utils - INFO - Successfully inserted 20 of 20 records (0 duplicates skipped)
 2026-01-29 07:40:20,147 - db_utils - INFO - Successfully inserted 20 of 20 records (0 duplicates skipped)
 2026-01-29 07:40:30,150 - db_utils - INFO - Successfully inserted 20 of 20 records (0 duplicates skipped)
+2026-01-29 12:13:37,600 - db_utils - INFO - Database connection test successful
+2026-01-29 12:14:00,723 - db_utils - INFO - Successfully inserted 20 of 20 records (0 duplicates skipped)
+2026-01-29 12:16:29,048 - db_utils - INFO - Database connection test successful

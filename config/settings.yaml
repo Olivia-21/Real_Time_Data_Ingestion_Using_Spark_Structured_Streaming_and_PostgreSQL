@@ -3,7 +3,7 @@
 # Data Generator Settings
 generator:
   output_path: /data/incoming
-  batch_size: 100                    # Events per CSV file
+  event_size: 10                    # Events per CSV file
   interval_seconds: 5               # Time between batch generations
   event_types:
     - view

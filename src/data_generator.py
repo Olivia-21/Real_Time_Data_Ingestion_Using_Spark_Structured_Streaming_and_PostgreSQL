@@ -10,13 +10,13 @@ Features:
 """
 
 import csv
-import hashlib
+import hashlib     # for deterministic event ID generation
 import os
 import random
 import signal
 import time
 import uuid
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Dict, List
 
@@ -40,7 +40,7 @@ class DataGenerator:
         """
         self.config = self._load_config(config_path)
         self.output_path = Path(self.config["generator"]["output_path"])
-        self.batch_size = self.config["generator"]["batch_size"]
+        self.event_size = self.config["generator"]["event_size"]
         self.interval = self.config["generator"]["interval_seconds"]
         self.event_types = self.config["generator"]["event_types"]
         self.purchase_probability = self.config["generator"]["purchase_probability"]
@@ -74,7 +74,7 @@ class DataGenerator:
         return {
             "generator": {
                 "output_path": "/data/incoming",
-                "batch_size": 10,
+                "event_size": 10,
                 "interval_seconds": 5,
                 "event_types": ["view", "purchase"],
                 "purchase_probability": 0.3
@@ -153,7 +153,7 @@ class DataGenerator:
         event_type = "purchase" if random.random() < self.purchase_probability else "view"
         
         # Generate timestamp (within last few minutes for realism)
-        timestamp = datetime.utcnow() - timedelta(seconds=random.randint(0, 60))
+        timestamp = datetime.now(timezone.utc) - timedelta(seconds=random.randint(0, 60))
         timestamp_str = timestamp.strftime("%Y-%m-%d %H:%M:%S")
         
         # Price is set for purchases, NULL for views
@@ -189,7 +189,7 @@ class DataGenerator:
         Returns:
             Path to the written file
         """
-        timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+        timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
         filename = f"events_{timestamp}_{batch_num:06d}.csv"
         filepath = self.output_path / filename
         
@@ -213,7 +213,7 @@ class DataGenerator:
     
     def _log(self, message: str):
         """Simple logging to stdout (captured by Docker)."""
-        timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+        timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
         print(f"{timestamp} - DataGenerator - INFO - {message}", flush=True)
     
     def stop(self):
@@ -226,7 +226,7 @@ class DataGenerator:
         Main loop: continuously generate batches of events.
         Runs until stop() is called or interrupted.
         """
-        self._log(f"Starting event generation. Batch size: {self.batch_size}, Interval: {self.interval}s")
+        self._log(f"Starting event generation. Event size: {self.event_size}, Interval: {self.interval}s")
         
         batch_num = 0
         total_events = 0
@@ -234,7 +234,7 @@ class DataGenerator:
         while self.running:
             try:
                 # Generate a batch of events
-                events = [self._generate_event() for _ in range(self.batch_size)]
+                events = [self._generate_event() for _ in range(self.event_size)]
                 
                 # Write to CSV
                 filepath = self._write_batch(events, batch_num)

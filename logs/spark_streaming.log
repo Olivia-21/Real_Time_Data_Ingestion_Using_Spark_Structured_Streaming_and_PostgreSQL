@@ -354,3 +354,28 @@
 2026-01-29 07:40:10,187 - spark_streaming - INFO - Batch 341: Processed 20 records, inserted 20 in 0.04s
 2026-01-29 07:40:20,148 - spark_streaming - INFO - Batch 342: Processed 20 records, inserted 20 in 0.04s
 2026-01-29 07:40:30,151 - spark_streaming - INFO - Batch 343: Processed 20 records, inserted 20 in 0.04s
+2026-01-29 12:13:37,546 - spark_streaming - INFO - ============================================================
+2026-01-29 12:13:37,547 - spark_streaming - INFO - Starting E-commerce Event Streaming Job
+2026-01-29 12:13:37,549 - spark_streaming - INFO - ============================================================
+2026-01-29 12:13:37,557 - spark_streaming - INFO - Waiting for PostgreSQL to be available...
+2026-01-29 12:13:37,601 - spark_streaming - INFO - PostgreSQL connection established
+2026-01-29 12:13:37,602 - spark_streaming - INFO - Creating Spark session: EcommerceEventStreaming
+2026-01-29 12:13:49,592 - spark_streaming - INFO - Spark session created successfully
+2026-01-29 12:13:49,595 - spark_streaming - INFO - Setting up file stream from: /data/incoming
+2026-01-29 12:13:51,919 - spark_streaming - INFO - File stream configured successfully
+2026-01-29 12:13:53,419 - spark_streaming - INFO - Starting streaming query with trigger: 10 seconds
+2026-01-29 12:13:54,724 - spark_streaming - INFO - Streaming query started successfully
+2026-01-29 12:13:54,741 - spark_streaming - INFO - Spark UI available at: http://localhost:4040
+2026-01-29 12:14:00,725 - spark_streaming - INFO - Batch 344: Processed 20 records, inserted 20 in 2.48s
+2026-01-29 12:16:29,022 - spark_streaming - INFO - ============================================================
+2026-01-29 12:16:29,023 - spark_streaming - INFO - Starting E-commerce Event Streaming Job
+2026-01-29 12:16:29,024 - spark_streaming - INFO - ============================================================
+2026-01-29 12:16:29,031 - spark_streaming - INFO - Waiting for PostgreSQL to be available...
+2026-01-29 12:16:29,050 - spark_streaming - INFO - PostgreSQL connection established
+2026-01-29 12:16:29,053 - spark_streaming - INFO - Creating Spark session: EcommerceEventStreaming
+2026-01-29 12:16:35,120 - spark_streaming - INFO - Spark session created successfully
+2026-01-29 12:16:35,121 - spark_streaming - INFO - Setting up file stream from: /data/incoming
+2026-01-29 12:16:36,326 - spark_streaming - INFO - File stream configured successfully
+2026-01-29 12:16:37,217 - spark_streaming - INFO - Starting streaming query with trigger: 10 seconds
+2026-01-29 12:16:37,848 - spark_streaming - INFO - Streaming query started successfully
+2026-01-29 12:16:37,855 - spark_streaming - INFO - Spark UI available at: http://localhost:4040

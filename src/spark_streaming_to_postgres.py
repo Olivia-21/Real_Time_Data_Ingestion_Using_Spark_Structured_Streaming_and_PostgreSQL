@@ -2,7 +2,7 @@
 Spark Structured Streaming Job for E-commerce Events.
 Reads CSV files from shared volume, validates, transforms, and writes to PostgreSQL.
 
-Production Features:
+ Features:
 - Process only new files (readStream with maxFilesPerTrigger)
 - Malformed record handling (PERMISSIVE mode)
 - Configurable trigger interval
@@ -94,8 +94,7 @@ class StreamingConfig:
 
 def get_event_schema() -> StructType:
     """
-    Define the schema for e-commerce events.
-    Using explicit schema prevents schema inference issues with streaming.
+    Define the schema for e-commerce events to prevent schema inference issues.
     """
     return StructType([
         StructField("event_id", StringType(), nullable=False),
@@ -220,7 +219,6 @@ def validate_and_clean(df: DataFrame, config: StreamingConfig) -> DataFrame:
 def write_to_postgres(batch_df: DataFrame, batch_id: int, config: StreamingConfig):
     """
     Write a micro-batch to PostgreSQL using upsert logic.
-    This is the foreachBatch sink function.
     
     Args:
         batch_df: DataFrame containing the micro-batch data
