@@ -7,7 +7,7 @@ import time
 import psycopg2
 from psycopg2 import sql, OperationalError, DatabaseError
 from psycopg2.extras import execute_values
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Callable
 from contextlib import contextmanager
 import os
 
