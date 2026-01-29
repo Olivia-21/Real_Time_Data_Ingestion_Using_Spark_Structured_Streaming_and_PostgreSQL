@@ -17,9 +17,9 @@ COPY requirements-spark.txt .
 RUN pip install --no-cache-dir -r requirements-spark.txt
 
 # Download PostgreSQL JDBC driver
-RUN mkdir -p /app/jars && \
-    curl -L -o /app/jars/postgresql-42.7.1.jar \
-    https://jdbc.postgresql.org/download/postgresql-42.7.1.jar
+#RUN mkdir -p /app/jars && \
+    #curl -L -o /app/jars/postgresql-42.7.1.jar \
+    #https://jdbc.postgresql.org/download/postgresql-42.7.1.jar
 
 # Copy source code
 COPY src/spark_streaming_to_postgres.py .
