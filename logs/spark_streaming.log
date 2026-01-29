@@ -593,3 +593,89 @@
 2026-01-29 13:59:50,176 - spark_streaming - INFO - Batch 520: Processed 20 records, inserted 20 in 0.05s
 2026-01-29 14:00:00,219 - spark_streaming - INFO - Batch 521: Processed 20 records, inserted 20 in 0.06s
 2026-01-29 14:00:10,212 - spark_streaming - INFO - Batch 522: Processed 20 records, inserted 20 in 0.07s
+2026-01-29 15:58:35,147 - spark_streaming - INFO - ============================================================
+2026-01-29 15:58:35,149 - spark_streaming - INFO - Starting E-commerce Event Streaming Job
+2026-01-29 15:58:35,151 - spark_streaming - INFO - ============================================================
+2026-01-29 15:58:35,172 - spark_streaming - INFO - Waiting for PostgreSQL to be available...
+2026-01-29 15:58:35,277 - spark_streaming - INFO - PostgreSQL connection established
+2026-01-29 15:58:35,301 - spark_streaming - INFO - Creating Spark session: EcommerceEventStreaming
+2026-01-29 15:59:04,357 - spark_streaming - INFO - Spark session created successfully
+2026-01-29 15:59:04,396 - spark_streaming - INFO - Setting up file stream from: /data/incoming
+2026-01-29 15:59:08,849 - spark_streaming - INFO - File stream configured successfully
+2026-01-29 15:59:11,356 - spark_streaming - INFO - Starting streaming query with trigger: 10 seconds
+2026-01-29 15:59:14,501 - spark_streaming - INFO - Streaming query started successfully
+2026-01-29 15:59:14,512 - spark_streaming - INFO - Spark UI available at: http://localhost:4040
+2026-01-29 15:59:31,286 - spark_streaming - INFO - Batch 523: Processed 50 records, inserted 50 in 8.29s
+2026-01-29 15:59:33,074 - spark_streaming - INFO - Batch 524: Processed 50 records, inserted 50 in 0.53s
+2026-01-29 15:59:41,806 - spark_streaming - INFO - Batch 525: Processed 10 records, inserted 10 in 0.53s
+2026-01-29 15:59:51,781 - spark_streaming - INFO - Batch 526: Processed 50 records, inserted 50 in 0.62s
+2026-01-29 16:00:01,229 - spark_streaming - INFO - Batch 527: Processed 20 records, inserted 20 in 0.40s
+2026-01-29 16:00:11,248 - spark_streaming - INFO - Batch 528: Processed 40 records, inserted 40 in 0.55s
+2026-01-29 16:00:22,034 - spark_streaming - INFO - Batch 529: Processed 20 records, inserted 20 in 0.31s
+2026-01-29 16:00:30,996 - spark_streaming - INFO - Batch 530: Processed 20 records, inserted 20 in 0.34s
+2026-01-29 16:00:41,083 - spark_streaming - INFO - Batch 531: Processed 20 records, inserted 20 in 0.36s
+2026-01-29 16:00:51,601 - spark_streaming - INFO - Batch 532: Processed 20 records, inserted 20 in 0.74s
+2026-01-29 16:01:00,790 - spark_streaming - INFO - Batch 533: Processed 20 records, inserted 20 in 0.25s
+2026-01-29 16:01:11,019 - spark_streaming - INFO - Batch 534: Processed 20 records, inserted 20 in 0.39s
+2026-01-29 16:01:21,149 - spark_streaming - INFO - Batch 535: Processed 20 records, inserted 20 in 0.28s
+2026-01-29 16:01:31,161 - spark_streaming - INFO - Batch 536: Processed 20 records, inserted 20 in 0.39s
+2026-01-29 16:01:40,788 - spark_streaming - INFO - Batch 537: Processed 20 records, inserted 20 in 0.23s
+2026-01-29 16:01:50,898 - spark_streaming - INFO - Batch 538: Processed 20 records, inserted 20 in 0.28s
+2026-01-29 16:02:01,325 - spark_streaming - INFO - Batch 539: Processed 20 records, inserted 20 in 0.38s
+2026-01-29 16:02:11,475 - spark_streaming - INFO - Batch 540: Processed 20 records, inserted 20 in 0.50s
+2026-01-29 16:02:22,119 - spark_streaming - INFO - Batch 541: Processed 20 records, inserted 20 in 0.37s
+2026-01-29 16:02:30,532 - spark_streaming - INFO - Batch 542: Processed 20 records, inserted 20 in 0.17s
+2026-01-29 16:02:40,421 - spark_streaming - INFO - Batch 543: Processed 20 records, inserted 20 in 0.11s
+2026-01-29 16:02:51,096 - spark_streaming - INFO - Batch 544: Processed 20 records, inserted 20 in 0.37s
+2026-01-29 16:03:00,603 - spark_streaming - INFO - Batch 545: Processed 20 records, inserted 20 in 0.22s
+2026-01-29 16:03:10,501 - spark_streaming - INFO - Batch 546: Processed 20 records, inserted 20 in 0.12s
+2026-01-29 16:03:20,610 - spark_streaming - INFO - Batch 547: Processed 20 records, inserted 20 in 0.14s
+2026-01-29 16:03:30,480 - spark_streaming - INFO - Batch 548: Processed 20 records, inserted 20 in 0.16s
+2026-01-29 16:03:40,604 - spark_streaming - INFO - Batch 549: Processed 20 records, inserted 20 in 0.16s
+2026-01-29 16:03:50,399 - spark_streaming - INFO - Batch 550: Processed 20 records, inserted 20 in 0.13s
+2026-01-29 16:04:00,390 - spark_streaming - INFO - Batch 551: Processed 20 records, inserted 20 in 0.11s
+2026-01-29 16:04:10,365 - spark_streaming - INFO - Batch 552: Processed 20 records, inserted 20 in 0.10s
+2026-01-29 16:04:20,630 - spark_streaming - INFO - Batch 553: Processed 20 records, inserted 20 in 0.15s
+2026-01-29 16:04:30,361 - spark_streaming - INFO - Batch 554: Processed 20 records, inserted 20 in 0.11s
+2026-01-29 16:04:40,403 - spark_streaming - INFO - Batch 555: Processed 20 records, inserted 20 in 0.15s
+2026-01-29 16:04:50,440 - spark_streaming - INFO - Batch 556: Processed 20 records, inserted 20 in 0.14s
+2026-01-29 16:05:00,401 - spark_streaming - INFO - Batch 557: Processed 20 records, inserted 20 in 0.12s
+2026-01-29 16:05:10,443 - spark_streaming - INFO - Batch 558: Processed 20 records, inserted 20 in 0.12s
+2026-01-29 16:05:20,633 - spark_streaming - INFO - Batch 559: Processed 20 records, inserted 20 in 0.12s
+2026-01-29 16:05:30,343 - spark_streaming - INFO - Batch 560: Processed 20 records, inserted 20 in 0.10s
+2026-01-29 16:05:40,437 - spark_streaming - INFO - Batch 561: Processed 20 records, inserted 20 in 0.19s
+2026-01-29 16:05:50,376 - spark_streaming - INFO - Batch 562: Processed 20 records, inserted 20 in 0.10s
+2026-01-29 16:06:00,330 - spark_streaming - INFO - Batch 563: Processed 20 records, inserted 20 in 0.09s
+2026-01-29 16:06:10,358 - spark_streaming - INFO - Batch 564: Processed 20 records, inserted 20 in 0.10s
+2026-01-29 16:06:20,574 - spark_streaming - INFO - Batch 565: Processed 20 records, inserted 20 in 0.13s
+2026-01-29 16:06:30,450 - spark_streaming - INFO - Batch 566: Processed 20 records, inserted 20 in 0.10s
+2026-01-29 16:06:40,393 - spark_streaming - INFO - Batch 567: Processed 20 records, inserted 20 in 0.13s
+2026-01-29 16:06:50,492 - spark_streaming - INFO - Batch 568: Processed 20 records, inserted 20 in 0.19s
+2026-01-29 16:07:00,484 - spark_streaming - INFO - Batch 569: Processed 20 records, inserted 20 in 0.14s
+2026-01-29 16:07:10,339 - spark_streaming - INFO - Batch 570: Processed 20 records, inserted 20 in 0.10s
+2026-01-29 16:07:20,522 - spark_streaming - INFO - Batch 571: Processed 20 records, inserted 20 in 0.13s
+2026-01-29 16:07:30,394 - spark_streaming - INFO - Batch 572: Processed 20 records, inserted 20 in 0.13s
+2026-01-29 16:07:41,007 - spark_streaming - INFO - Batch 573: Processed 20 records, inserted 20 in 0.26s
+2026-01-29 16:07:51,093 - spark_streaming - INFO - Batch 574: Processed 20 records, inserted 20 in 0.29s
+2026-01-29 16:08:01,256 - spark_streaming - INFO - Batch 575: Processed 20 records, inserted 20 in 0.43s
+2026-01-29 16:08:10,900 - spark_streaming - INFO - Batch 576: Processed 20 records, inserted 20 in 0.33s
+2026-01-29 16:08:21,114 - spark_streaming - INFO - Batch 577: Processed 20 records, inserted 20 in 0.31s
+2026-01-29 16:08:31,155 - spark_streaming - INFO - Batch 578: Processed 20 records, inserted 20 in 0.39s
+2026-01-29 16:08:41,225 - spark_streaming - INFO - Batch 579: Processed 20 records, inserted 20 in 0.43s
+2026-01-29 16:08:50,540 - spark_streaming - INFO - Batch 580: Processed 20 records, inserted 20 in 0.16s
+2026-01-29 16:09:00,368 - spark_streaming - INFO - Batch 581: Processed 20 records, inserted 20 in 0.08s
+2026-01-29 16:09:10,482 - spark_streaming - INFO - Batch 582: Processed 20 records, inserted 20 in 0.15s
+2026-01-29 16:09:20,693 - spark_streaming - INFO - Batch 583: Processed 20 records, inserted 20 in 0.10s
+2026-01-29 16:09:30,381 - spark_streaming - INFO - Batch 584: Processed 20 records, inserted 20 in 0.09s
+2026-01-29 16:09:40,440 - spark_streaming - INFO - Batch 585: Processed 20 records, inserted 20 in 0.10s
+2026-01-29 16:09:50,492 - spark_streaming - INFO - Batch 586: Processed 20 records, inserted 20 in 0.10s
+2026-01-29 16:10:00,441 - spark_streaming - INFO - Batch 587: Processed 20 records, inserted 20 in 0.12s
+2026-01-29 16:10:10,366 - spark_streaming - INFO - Batch 588: Processed 20 records, inserted 20 in 0.09s
+2026-01-29 16:10:20,820 - spark_streaming - INFO - Batch 589: Processed 20 records, inserted 20 in 0.16s
+2026-01-29 16:10:30,452 - spark_streaming - INFO - Batch 590: Processed 20 records, inserted 20 in 0.11s
+2026-01-29 16:10:40,464 - spark_streaming - INFO - Batch 591: Processed 20 records, inserted 20 in 0.12s
+2026-01-29 16:10:50,464 - spark_streaming - INFO - Batch 592: Processed 20 records, inserted 20 in 0.11s
+2026-01-29 16:11:00,501 - spark_streaming - INFO - Batch 593: Processed 20 records, inserted 20 in 0.14s
+2026-01-29 16:11:10,459 - spark_streaming - INFO - Batch 594: Processed 20 records, inserted 20 in 0.08s
+2026-01-29 16:11:20,695 - spark_streaming - INFO - Batch 595: Processed 20 records, inserted 20 in 0.15s
+2026-01-29 16:11:30,421 - spark_streaming - INFO - Batch 596: Processed 20 records, inserted 20 in 0.12s

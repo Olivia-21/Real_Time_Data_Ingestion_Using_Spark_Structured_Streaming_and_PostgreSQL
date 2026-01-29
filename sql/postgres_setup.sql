@@ -4,7 +4,7 @@
 -- Create the user_events table with proper schema
 CREATE TABLE IF NOT EXISTS user_events (
     -- Primary key using event_id for uniqueness
-    event_id VARCHAR(36) PRIMARY KEY,
+    event_id uuid PRIMARY KEY,
     
     -- User identification
     user_id VARCHAR(20) NOT NULL,
