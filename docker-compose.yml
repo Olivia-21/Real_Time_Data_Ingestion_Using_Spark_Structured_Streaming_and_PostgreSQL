@@ -1,0 +1,78 @@
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      POSTGRES_DB: ecommerce_events
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/postgres_setup.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d ecommerce_events" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - streaming_network
+
+  # Data Generator - Produces CSV files continuously
+  data-generator:
+    build:
+      context: .
+      dockerfile: Dockerfile.generator
+    container_name: data-generator
+    volumes:
+      - shared_data:/data
+      - ./logs:/app/logs
+      - ./config:/app/config:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - streaming_network
+    restart: unless-stopped
+
+  # Spark Master - Runs Structured Streaming job
+  spark-master:
+    build:
+      context: .
+      dockerfile: Dockerfile.spark
+    container_name: spark-master
+    volumes:
+      - shared_data:/data
+      - ./logs:/app/logs
+      - ./config:/app/config:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=ecommerce_events
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres123
+    depends_on:
+      postgres:
+        condition: service_healthy
+      data-generator:
+        condition: service_started
+    ports:
+      - "4040:4040" # Spark UI
+    networks:
+      - streaming_network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+  shared_data:
+    driver: local
+
+networks:
+  streaming_network:
+    driver: bridge

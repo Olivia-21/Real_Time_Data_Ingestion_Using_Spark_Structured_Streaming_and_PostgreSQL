@@ -1,0 +1,18 @@
+# Lightweight Python image for data generation
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install dependencies
+COPY requirements-generator.txt .
+RUN pip install --no-cache-dir -r requirements-generator.txt
+
+# Copy source code
+COPY src/data_generator.py .
+COPY config/settings.yaml ./config/
+
+# Create necessary directories
+RUN mkdir -p /data/incoming /app/logs
+
+# Run the data generator
+CMD ["python", "-u", "data_generator.py"]

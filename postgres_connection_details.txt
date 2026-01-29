@@ -1,0 +1,17 @@
+# PostgreSQL Connection Details
+# ==============================
+# These are the connection parameters for the Dockerized PostgreSQL instance.
+
+Host: postgres (Docker service name) or localhost (from host machine)
+Port: 5432
+Database: ecommerce_events
+Username: postgres
+Password: postgres123
+
+# JDBC URL (for Spark):
+jdbc:postgresql://postgres:5432/ecommerce_events
+
+# Python psycopg2 connection string:
+postgresql://postgres:postgres123@postgres:5432/ecommerce_events
+
+# Note: When connecting from outside Docker, use 'localhost' instead of 'postgres'
