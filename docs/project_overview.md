@@ -15,7 +15,7 @@ This project implements a production-ready real-time data pipeline that:
 │ Data Generator  │─────▶│ Shared Volume│─────▶│ Spark Master │
 │   (Python)      │ CSV  │ /data/incoming│      │  (PySpark)   │
 └─────────────────┘      └──────────────┘      └──────┬───────┘
-                                                       │ JDBC
+                                                       │ psycopg2
                                                        ▼
                                                ┌──────────────┐
                                                │  PostgreSQL  │
